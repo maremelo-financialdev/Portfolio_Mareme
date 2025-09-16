@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER avec photo et nom -->
+    <header>
+        <div class="profile">
+            <img src="Photo_profil.jpg" alt="Ma photo" class="photo">
+            <h1>Mareme LO</h1>
+            <p>Développeuse d'applications en formation</p>
+            <button id="cv-button">📄 Consulter le CV</button>
+        </div>
+
+        <!-- <div class="skills">
+            <span class="skill">Orientation utilisateur</span>
+            <span class="skill">Résilience face aux bugs</span>
+            <span class="skill">Esprit d’architecte</span>
+            <span class="skill">Esprit analytique</span>
+            <span class="skill">Rigueur</span>
+        </div>
+
+        <div> class="hero-header"</div>
+        <!-- <h1>Mareme LO</h1>
+        <p>Développeuse d'applications en formation</p> -->
+        <!-- <div class="bubble-container">
+            <span class="bubble">Esprit analytique</span>
+            <span class="bubble">Orientation utilisateur</span>
+            <span class="bubble">Esprit d’architecte</span>
+            <span class="bubble">Rigueur</span>
+            <span class="bubble">Autres</span>
+            <span class="bubble">Autres</span>
+            <span class="bubble">Calculs financiers</span>
+            <span class="bubble">Résolution de problèmes</span>
+            <span class="bubble">Autres</span>
+            <span class="bubble">Autres</span>
+        </div> -->
+
+
+    </header>
+
+    <!-- SECTION PROJETS -->
+    <section id="projects">
+        <h2>🚀 Mes Projets</h2>
+        <div class="projects-grid">
+
+            <!-- Mes projets -->
+            <div class="project-card">
+                <h3>Projet 1 : Application de facturation - encours</h3>
+                <p>Application web dynamique de facturation (clients, produits, suivi des factures, tableau de bord
+                    dynamique, relances
+                    automatiques...).</p>
+                <button onclick="toggleDetails(this)">Voir détails</button>
+                <div class="details">
+                    <ul>
+                        <li>Frontend : HTML, CSS, JavaScript</li>
+                        <li>Backend : Python (Flask/Django)</li>
+                        <li>Base de données : MySQL</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Projet 2 : Portfolio interactif</h3>
+                <p>Un site web moderne avec animations et design coloré.</p>
+                <button onclick="toggleDetails(this)">Voir détails</button>
+                <div class="details">
+                    <ul>
+                        <li>Animations CSS</li>
+                        <li>Responsive design</li>
+                        <li>Déploiement sur GitHub Pages</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Projet 3 : Calculs financiers - projet photovolcaique</h3>
+                <p> Conception d’un outil automatisé de calcul et d’analyse
+                    financière pour des investissements dans le domaine de l’énergie
+                    photovolcaïque (études de rentabilité et financement).</p>
+                <button onclick="toggleDetails(this)">Voir détails</button>
+                <div class="details">
+                    <ul>
+                        <li>Excel / VBA</li>
+                        <li>Gestion base de données</li>
+                        <li>Calculs financiers</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Projet 4 : Application de facturation version Excel</h3>
+                <p> Conception d'un outil de facturation dynamique et automatisé sur excel avec (clients, produits,
+                    suivi des factures, tableau de bord dynamique...).</p>
+                <button onclick="toggleDetails(this)">Voir détails</button>
+                <div class="details">
+                    <ul>
+                        <li>Excel / VBA</li>
+                        <li>Gestion base de données</li>
+                        <li>Calculs financiers</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SECTION COMPETENCES VISES d'ici fin Décembnre -->
+    <section id="Compétence_12_2025">
+        <h2>🧭 Cap sur 2025 – Mes compétences cibles :</h2>
+        <div class="competence-grid">
+
+            <!-- Mes projets -->
+            <div class="competence-card">
+                <h3>WEB </h3>
+                <p>Piscine Web : apprentissage approfondie de HTML / CSS / JavaScript
+                </p>
+                <button onclick="toggleDetails(this)">Voir détails</button>
+                <div class="details">
+                    <ul>
+                        <li>Mini-projet : Digital Resume → création de votre CV sous forme de page web, puis déploiement
+                            en ligne.</li>
+                        <li>Projet Web : conception d’une plateforme de recherche d’emploi (type Indeed, Welcome to the
+                            Jungle...)</li>
+                        <li>Fonctionnalités : interface utilisateur, gestion d’une base de données, backend avec API
+                            REST.</li>
+                        <li>Technologies :
+                        <li> Frontend : HTML / CSS / JavaScript</li>
+                        <li> Backend (au choix) : Python, Node.js, PHP</li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="competence-card">
+                <h3>JAVA</h3>
+                <p>Piscine Java : introduction à la programmation orientée objet (POO) et à ses concepts fondamentaux
+                </p>
+                <button onclick="toggleDetails(this)">Voir détails</button>
+                <div class="details">
+                    <ul>
+                        <li>Projet Java : développement d’un jeu en Java respectant les principes de la POO</li>
+                        <li>Concepts attendus : classes, héritage, encapsulation, polymorphisme</li>
+                        <li>Format : jeu en console ou version graphique (Swing / JavaFX)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="competence-card">
+                <h3>Administration systèmes</h3>
+
+                <button onclick="toggleDetails(this)">Voir détails</button>
+                <div class="details">
+                    <ul>
+                        <li>Utilisation et configuration de machines virtuelles (VM)</li>
+                        <li>Déploiement d’infrastructures réseau</li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="competence-card">
+                <h3>Projets DevOps</h3>
+                <p> Déploiement d’une application avec une infrastructure web :
+                </p>
+                <button onclick="toggleDetails(this)">Voir détails</button>
+                <div class="details">
+                    <ul>
+                        <li>2 frontends</li>
+                        <li>1 backend</li>
+                        <li>2 bases de données</li>
+                        <li>Mise en place d’une infrastructure d’automatisation.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ME CONTACTER -->
+    <footer>
+        <h2>📬 Me Contacter</h2>
+        <!-- email -->
+        <p>Email :
+            <a href="mailto:maremelo616@gmail.com">maremelo616@gmail.com</a>
+        </p>
+
+        <!-- numéro téléphone -->
+        <p>Numéro téléphone :
+            <a> +33 6 22 11 97 15</a>
+        </p>
+
+
+        <!-- LinkedIn -->
+        <p>LinkedIn : <a href="https://www.linkedin.com/in/mareme-lo-9013aa157?utm_source" target="_blank"
+                rel="noopener noreferrer">
+                Mon profil LinkedIn</a>
+        </p>
+
+        <!-- Github -->
+        <p> GitHub :
+            <a href="https://github.com/maremelo616" target="_blank" rel="noopener noreferrer">
+                Mon profil GitHub</a>
+
+    </footer>
+
+</body>
+
+</html>
