@@ -1,0 +1,124 @@
+/* Style global */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #9aa872, #6b5b95);
+    /* background: linear-gradient(135deg, #ff6f61, #6b5b95); */
+    color: white;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.photo {
+    width: 200px;
+    border-radius: 50%;
+
+    border: 4px solid rgb(126, 133, 33) .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+#cv-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: rgb(40, 40, 20);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#cv-button:hover {
+    transform: scale(1.1);
+    background: lime;
+}
+
+/* mise en page partie Projets à venir */
+#Compétence_12_2025 {
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.competence-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.competence-card {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.competence-card:hover {
+    transform: scale(1.05);
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.details {
+    display: none;
+    margin-top: 10px;
+}
+
+
+/* * mise en page partie Projets */
+*/ #projects {
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.details {
+    display: none;
+    margin-top: 10px;
+}
+
+/* Mise en page bas de page */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #222;
+}
+
+footer a {
+    color: yellow;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
