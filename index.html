@@ -16,35 +16,14 @@
         <div class="profile">
             <img src="Photo_profil.jpg" alt="Ma photo" class="photo">
             <h1>Mareme LO</h1>
-            <p>Développeuse d'applications en formation</p>
+            <p>Etudiante en formation informatique à EPITECH PARIS </p>
+            <h5> A la recherche d'un contrat d'apprentissage en data analyst ou en développement d'applications</h5>
+            <h6>Rythme d'alternance : 4 semaines en entreprise / 2 semaines école.
+                <br> Durée du contrat d'alternance : au moins 9 mois (de Janvier 2026 à Septembre 2026) et au maximum
+                2ans et démi selon.
+            </h6>
             <button id="cv-button">📄 Consulter le CV</button>
         </div>
-
-        <!-- <div class="skills">
-            <span class="skill">Orientation utilisateur</span>
-            <span class="skill">Résilience face aux bugs</span>
-            <span class="skill">Esprit d’architecte</span>
-            <span class="skill">Esprit analytique</span>
-            <span class="skill">Rigueur</span>
-        </div>
-
-        <div> class="hero-header"</div>
-        <!-- <h1>Mareme LO</h1>
-        <p>Développeuse d'applications en formation</p> -->
-        <!-- <div class="bubble-container">
-            <span class="bubble">Esprit analytique</span>
-            <span class="bubble">Orientation utilisateur</span>
-            <span class="bubble">Esprit d’architecte</span>
-            <span class="bubble">Rigueur</span>
-            <span class="bubble">Autres</span>
-            <span class="bubble">Autres</span>
-            <span class="bubble">Calculs financiers</span>
-            <span class="bubble">Résolution de problèmes</span>
-            <span class="bubble">Autres</span>
-            <span class="bubble">Autres</span>
-        </div> -->
-
-
     </header>
 
     <!-- SECTION PROJETS -->
@@ -54,7 +33,57 @@
 
             <!-- Mes projets -->
             <div class="project-card">
-                <h3>Projet 1 : Application de facturation - encours</h3>
+                <h3>Projet 1 : Calculs financiers - projet photovolcaique</h3>
+                <p> Conception d’un outil automatisé de calcul et d’analyse
+                    financière pour des investissements dans le domaine de l’énergie
+                    photovolcaïque (études de rentabilité et financement).</p>
+                <button onclick="toggleDetails(this)">Compétences techniques</button>
+                <div class="details">
+                    <ul>
+                        <li>Excel / VBA</li>
+                        <li>Gestion base de données</li>
+                        <li>Calculs financiers</li>
+                    </ul>
+                </div>
+                <button class="popup-button" onclick="openPopup(this)"
+                    data-images="P3_img1_accueil.png,P3_img7_guide.png,P3_img2_parametres.png,P3_img3_resultatsFin.png,P3_img4_amort.png,P3_img5_echeancierFin.png,P3_img6_dashbord1.png,P3_img7_dashbord2.png"
+                    data-captions="🟢 Page d’accueil du projet : Interface d’entrée claire et intuitive, permettant à l’utilisateur de lancer une nouvelle simulation ou de consulter les projets existants. Elle présente l'ensemble des parties existantes du projet. Cette page d'accueil permet de naviger falcilement entre les différentes modules.|
+                                    📘 Guide d’utilisation du logiciel : Présentation structurée et détaillée des fonctionnalités principales du simulateur photovoltaïque : configuration des données, calculs d’amortissement, résultats financiers, tableau récapitulatif et menu principal. Enfin, les conseils d’utilisation guident l’utilisateur dans l’ordre optimal d’utilisation des modules pour garantir la fiabilité des simulations.|
+                                    ⚙️ Paramètres techniques : Formulaire de saisie des données liées à l’installation photovoltaïque : puissance crête, orientation, surface disponible, taux d’ensoleillement, données financières historiques et liées à l'achat du nouveau matériel... Chaque champ est accompagné d’un tooltip explicatif pour guider l’utilisateur.|
+                                    💰 Résultats financiers : Cette partie représente la génértion des calculs financiers nécessaires à l'évaluation financière du projet sur sa rentabilité avec le calcul des flux des différents résultats, revenus, flux de cahsflow et des ratios financiers décisionnels comme la VAN et le TRI. Ces calculs s'effectuent automatiquement en fonction des informations renseignées à la page Paramètres. Cette page affiche 6années qu'on peut faire défiler avec la barre latérale du bas|
+                                    🔍 Calcul d'amortissements des immobilisations (matériaux) : Cette partie se remplie automatquement selon les informations données sur la page Paramètres. Elle affiche les dotations annuelles de chaque immobilisations jusqu'à son terme avec toutes les informations d'un tableau d'amortissement. Ces deux tableaux peuvent être téléchargés facilement avec le bouton (Télécharger le rapport) qui permet de proposer ensuite l'enregistrement du rapport en pdf ou l'impression. Les barres verticales de défilement permettent d'afficher les autres années en focntion de la durée de l'immobilisation qui change en fonction du projet/matériel|
+                                    📊 Tableaux d'emprunt : Comparaison entre le plan d’amortissement d’un nouveau prêt et celui du prêt actuel. Chaque tableau détaille les paiements mensuels, le capital remboursé, les intérêts, et les cumuls. Un encadré latéral résume les valeurs clés du prêt : montant, durée, taux, et mensualité. L’utilisateur peut télécharger un rapport complet pour archivage ou analyse financière.|
+                                    📈 DASHBOARD : Cette partie représente la synthèse structurée du projet. Il montre à l'utilisateur tous les indicateurs financviers qui aident à la prise de décision mais également les résultats avec mise en évidence des points forts et des risques. Ce tableau facilite la prise de décision pour un investisseur ou un porteur de projet L’utilisateur.|
+                                    📋 COMPARATIF : Cette page est générer pour donner à l'utilisateur un comparatif entre les deux projet et aider à la prise de décision avec un visuel graphic."
+                    data-title="Projet 1 : Calculs financiers - projet photovolcaique"
+                    data-text="Voici quelques captures illustrant l’interface et les fonctionnalités de l'application.">
+                    👀 Visualiser le projet
+                </button>
+
+            </div>
+
+
+            <div class="project-card">
+                <h3>Projet 2 : Portfolio interactif</h3>
+                <p>Vous explorez actuellement ce projet concernant mon portfolio en ligne : un site moderne, animé et
+                    haut en couleurs, conçu pour refléter ma créativité et mes compétences en développement web
+                    coloré.</p>
+                <button onclick="toggleDetails(this)">Technos utilisés</button>
+                <div class="details">
+                    <ul>
+                        <li>HTML</li>
+                        <li>Python</li>
+                        <li>Javascript</li>
+                        <li>Animations CSS</li>
+                        <li>Responsive design</li>
+                        <li>Framework : materrialize CSS </li>
+                        <li>Déploiement sur GitHub Pages</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Projet 3 : Application de facturation - encours</h3>
                 <p>Application web dynamique de facturation (clients, produits, suivi des factures, tableau de bord
                     dynamique, relances
                     automatiques...).</p>
@@ -64,34 +93,6 @@
                         <li>Frontend : HTML, CSS, JavaScript</li>
                         <li>Backend : Python (Flask/Django)</li>
                         <li>Base de données : MySQL</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Projet 2 : Portfolio interactif</h3>
-                <p>Un site web moderne avec animations et design coloré.</p>
-                <button onclick="toggleDetails(this)">Voir détails</button>
-                <div class="details">
-                    <ul>
-                        <li>Animations CSS</li>
-                        <li>Responsive design</li>
-                        <li>Déploiement sur GitHub Pages</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Projet 3 : Calculs financiers - projet photovolcaique</h3>
-                <p> Conception d’un outil automatisé de calcul et d’analyse
-                    financière pour des investissements dans le domaine de l’énergie
-                    photovolcaïque (études de rentabilité et financement).</p>
-                <button onclick="toggleDetails(this)">Voir détails</button>
-                <div class="details">
-                    <ul>
-                        <li>Excel / VBA</li>
-                        <li>Gestion base de données</li>
-                        <li>Calculs financiers</li>
                     </ul>
                 </div>
             </div>
@@ -108,7 +109,28 @@
                         <li>Calculs financiers</li>
                     </ul>
                 </div>
+
             </div>
+
+            <div class="project-card">
+                <h3>Projet 5 : CV WEB</h3>
+                <p> Site internet dynamique sur la présentation de mon CV</p>
+                <button onclick="toggleDetails(this)">Voir détails</button>
+                <div class="details">
+                    <ul>
+                        <li>HTML</li>
+                        <li>Javascript</li>
+                        <li>Animations CSS</li>
+                        <li>Framework : materrialize CSS </li>
+                        <li>Déploiement sur GitHub Pages</li>
+                    </ul>
+                </div>
+                <a href="https://maremelo-financialdev.github.io/CV/" target="_blank" class="external-link-button">
+                    Visiter le site
+                </a>
+
+            </div>
+
 
         </div>
     </section>
@@ -127,18 +149,20 @@
                 <button onclick="toggleDetails(this)">Voir détails</button>
                 <div class="details">
                     <ul>
-                        <li>Mini-projet : Digital Resume → création de votre CV sous forme de page web, puis déploiement
+                        <li> Mini-projet : Digital Resume → création de votre CV sous forme de page web, puis
+                            déploiement
                             en ligne.</li>
-                        <li>Projet Web : conception d’une plateforme de recherche d’emploi (type Indeed, Welcome to the
+                        <li> Projet Web : conception d’une plateforme de recherche d’emploi (type Indeed, Welcome to the
                             Jungle...)</li>
-                        <li>Fonctionnalités : interface utilisateur, gestion d’une base de données, backend avec API
+                        <li> Fonctionnalités : interface utilisateur, gestion d’une base de données, backend avec API
                             REST.</li>
-                        <li>Technologies :
+                        <li> Technologies :
                         <li> Frontend : HTML / CSS / JavaScript</li>
                         <li> Backend (au choix) : Python, Node.js, PHP</li>
                         </li>
                     </ul>
                 </div>
+
             </div>
 
             <div class="competence-card">
@@ -153,6 +177,7 @@
                         <li>Format : jeu en console ou version graphique (Swing / JavaFX)</li>
                     </ul>
                 </div>
+
             </div>
 
             <div class="competence-card">
@@ -166,6 +191,12 @@
 
                     </ul>
                 </div>
+                <!-- <button class="popup-button" onclick="openPopup(this)" data-images="imagesProjects/img1.jpg,imagesProjects/img2.jpg,imagesProjects/img3.jpg"
+                    data-title="Projet 1 : Application de facturation"
+                    data-text="Voici quelques captures illustrant l’interface et les fonctionnalités.">
+                    👀 Visualiser le projet
+                </button> -->
+
             </div>
 
             <div class="competence-card">
@@ -181,6 +212,14 @@
                         <li>Mise en place d’une infrastructure d’automatisation.</li>
                     </ul>
                 </div>
+
+                <!-- <button class="popup-button" onclick="openPopup(this)" data-images="imagesProjects/img1.jpg,imagesProjects/img2.jpg,imagesProjects/img3.jpg"
+                    data-title="Projet 1 : Application de facturation"
+                    data-text="Voici quelques captures illustrant l’interface et les fonctionnalités.">
+                    👀 Visualiser le projet
+                </button> -->
+
+
             </div>
 
         </div>
@@ -208,10 +247,45 @@
 
         <!-- Github -->
         <p> GitHub :
-            <a href="https://github.com/maremelo616" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/maremelo-financialdev" target="_blank" rel="noopener noreferrer">
                 Mon profil GitHub</a>
 
     </footer>
+
+    <!-- Structure du popup -->
+    <div id="popup" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <div class="popup-text">
+                <h3>Détails du projet</h3>
+                <p>Voici quelques images illustrant le projet.</p>
+            </div>
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="..." class="carousel-img active">
+                    <img src="..." class="carousel-img">
+                    <!-- autres images -->
+                </div>
+                <div class="carousel-caption">
+                    <p id="carousel-text">Cette partie concerne la facturation</p>
+                </div>
+
+                <div class="carousel-pagination">
+                    <button class="page-arrow" onclick="prevImage()">←</button>
+                    <span class="page-number active" onclick="goToImage(0)">1</span>
+                    <span class="page-number" onclick="goToImage(1)">2</span>
+                    <span class="page-number" onclick="goToImage(2)">3</span>
+                    <span class="page-number" onclick="goToImage(3)">4</span>
+                    <span class="page-number" onclick="goToImage(4)">5</span>
+                    <span class="ellipsis">...</span>
+                    <span class="page-number" onclick="goToImage(49)">50</span>
+                    <button class="page-arrow" onclick="nextImage()">→</button>
+                </div>
+
+
+            </div>
+
+        </div>
 
 </body>
 

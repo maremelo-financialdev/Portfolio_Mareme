@@ -2,7 +2,7 @@
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    background: linear-gradient(135deg, #9aa872, #6b5b95);
+    background: linear-gradient(135deg, #9aa872, #6b5b95, #5e469bff);
     /* background: linear-gradient(135deg, #ff6f61, #6b5b95); */
     color: white;
 }
@@ -15,16 +15,12 @@ header {
 
 .photo {
     width: 200px;
+    height: 220px;
     border-radius: 50%;
-
-    border: 4px solid rgb(126, 133, 33) .skills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 20px;
-    }
-
+    box-shadow: 0 0 200px rgba(251, 143, 3, 0.818);
+    transition: transform 0.3s, box-shadow 0.9s;
 }
+
 
 h1 {
     font-size: 2.5em;
@@ -45,7 +41,13 @@ h1 {
 
 #cv-button:hover {
     transform: scale(1.1);
-    background: lime;
+    background: rgba(251, 143, 3, 0.818);
+}
+
+/* mise en page partie Projets à v*/
+#projects {
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* mise en page partie Projets à venir */
@@ -64,7 +66,7 @@ h1 {
     background: rgba(0, 0, 0, 0.3);
     border-radius: 12px;
     padding: 20px;
-    transition: transform 0.3s, background 0.3s;
+    transition: transform 0.6s, background 0.s;
 }
 
 .competence-card:hover {
@@ -121,4 +123,239 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* Mise en forme des boutons "Voir détails" */
+button {
+    border-radius: 12px;
+    /* Arrondi des coins */
+    padding: 8px 16px;
+    background-color: #6b5b95;
+    /* Bleu Bootstrap */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Effet au survol */
+button:hover {
+    background-color: #ebb548;
+}
+
+/* Effet au clic (état actif) */
+button:active {
+    background-color: #ebb548;
+    transform: scale(0.98);
+    /* Légère réduction pour effet de clic */
+}
+
+/* ---------------Mise en page des popup------------------------- */
+
+/* Overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+
+/* Popup content */
+.popup-content {
+    background: linear-gradient(135deg, #9aa872, #6b5b95, #5e469bff);
+    /* background: rgb(168, 47, 47); */
+    padding: 20px;
+    border-radius: 12px;
+    width: 95%;
+    max-width: 1200px;
+    max-height: 95vh;
+    padding: 30px;
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.9s ease;
+}
+
+/* animation ouverture popup */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ---------------Carousel------------------ */
+.carousel {
+    position: relative;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carousel-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-img {
+    max-height: 600px;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: rotateY(90deg);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    backface-visibility: hidden;
+}
+
+.carousel-img.active {
+    opacity: 1;
+    transform: rotateY(0deg);
+    z-index: 1;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.carousel-caption {
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    font-size: 1em;
+    font-style: italic;
+}
+
+
+.prev,
+.next {
+    background: #f1ac2c;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+@media (max-width: 600px) {
+    .popup-content {
+        width: 98%;
+        padding: 20px;
+    }
+
+    .carousel {
+        height: 300px;
+    }
+
+    .carousel-img {
+        max-height: 300px;
+    }
+}
+
+.carousel-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.page-number {
+    background-color: #444;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.page-number:hover {
+    background-color: #ebb548;
+}
+
+.page-number.active {
+    background-color: #9aa872;
+}
+
+.page-arrow {
+    background-color: #5e469bff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.ellipsis {
+    color: white;
+    padding: 0 6px;
+}
+
+/* ----------Mise en forme lien vers mon CV en ligne---- */
+
+.external-link-button {
+    border-radius: 12px;
+    /* Arrondi des coins */
+    padding: 8px 16px;
+    background-color: #6b5b95;
+    /* Bleu Bootstrap */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Effet au survol */
+.external-link-button:hover {
+    background-color: #ebb548;
+}
+
+/* Effet au clic (état actif) */
+.external-link-button:active {
+    background-color: #ebb548;
+    transform: scale(0.98);
+    /* Légère réduction pour effet de clic */
 }
