@@ -18,7 +18,7 @@ Portfolio moderne et interactif présentant mes projets en **data analysis** et 
 - Materialize CSS
 
 **Backend**
-- Python 3.x
+- Python
 - Flask : Routes, Gestion emails (SMTP)
 
 **Déploiement**
@@ -62,6 +62,8 @@ PORTEFEUILLE.CV - V1/
 ---
 
 ## 🚀 Installation & Lancement
+
+Ce portfolio est accessible directement sur le lien suivant : https://maremelo-financialdev.github.io/Portfolio_Mareme/
 
 ### 1. Cloner le projet
 ```bash
