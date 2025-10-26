@@ -7,42 +7,156 @@ body {
     color: white;
 }
 
-/* Header */
-header {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.photo {
-    width: 200px;
-    height: 220px;
-    border-radius: 50%;
-    box-shadow: 0 0 200px rgba(251, 143, 3, 0.818);
-    transition: transform 0.3s, box-shadow 0.9s;
-}
-
-
-h1 {
-    font-size: 2.5em;
-    margin: 10px 0;
-}
-
-#cv-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: rgb(40, 40, 20);
+/* === SECTION ABOUT (Header + Parcours) === */
+.about-section {
+    background: linear-gradient(135deg, #5e469bff, #6b5b95, #9aa872);
     color: white;
+    padding: 80px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.about-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeUp 1.2s ease-out;
+}
+
+/* --- Bloc photo et présentation --- */
+.about-photo-box {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    max-width: 380px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-photo-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(235, 181, 72, 0.35);
+}
+
+.about-photo {
+    width: 200px;
+    height: 210px;
+    border-radius: 50%;
+    box-shadow: 0 0 70px rgba(235, 181, 72, 0.4);
+    margin-bottom: 20px;
+}
+
+.about-name {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+    color: #ebb548;
+}
+
+.about-role {
+    font-size: 1.1em;
+    color: #f4f4f4;
+    margin-bottom: 5px;
+}
+
+.about-subrole {
+    font-size: 1em;
+    font-style: italic;
+    color: #cfcfcf;
+    margin-bottom: 20px;
+}
+
+/* --- Bouton CV --- */
+#cv-button {
+    margin-top: 10px;
+    padding: 10px 24px;
+    background: linear-gradient(135deg, #9aa872, #ebb548);
+    color: #222;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(235, 181, 72, 0.5);
 }
 
 #cv-button:hover {
-    transform: scale(1.1);
-    background: rgba(251, 143, 3, 0.818);
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #ebb548, #9aa872);
 }
+
+/* --- Bloc texte du parcours --- */
+.about-text-box {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.about-text-box h2 {
+    color: #ebb548;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    border-left: 4px solid #ebb548;
+    padding-left: 12px;
+}
+
+.about-text-box p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.about-text-box strong {
+    color: #ebb548;
+}
+
+.about-text-box em {
+    color: #9aa872;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .about-wrapper {
+        flex-direction: column;
+    }
+
+    .about-photo-box {
+        max-width: 90%;
+    }
+
+    .about-text-box {
+        max-width: 95%;
+        text-align: center;
+    }
+
+    .about-text-box h2 {
+        border: none;
+        padding: 0;
+    }
+}
+
+/* --- Animation --- */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =================PROJETS================= */
 
 /* mise en page partie Projets à v*/
 #projects {
@@ -66,24 +180,18 @@ h1 {
     background: rgba(0, 0, 0, 0.3);
     border-radius: 12px;
     padding: 20px;
-    transition: transform 0.6s, background 0.s;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .competence-card:hover {
     transform: scale(1.05);
     background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 12px 40px rgba(235, 181, 72, 0.35);
 }
 
 .details {
     display: none;
     margin-top: 10px;
-}
-
-
-/* * mise en page partie Projets */
-*/ #projects {
-    padding: 50px 20px;
-    background: rgba(255, 255, 255, 0.1);
 }
 
 .projects-grid {
@@ -96,12 +204,13 @@ h1 {
     background: rgba(0, 0, 0, 0.3);
     border-radius: 12px;
     padding: 20px;
-    transition: transform 0.3s, background 0.3s;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .project-card:hover {
     transform: scale(1.05);
     background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 12px 40px rgba(235, 181, 72, 0.35);
 }
 
 .details {
@@ -113,7 +222,7 @@ h1 {
 footer {
     text-align: center;
     padding: 30px;
-    background: #222;
+    background-color: rgba(2, 0, 6, 0.85);
 }
 
 footer a {
@@ -293,7 +402,7 @@ button:active {
     border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
-    transition: background 0.3s ease, transform 0.2s;
+    transition: transform 0.3s ease, background-color 0.3s ease;
     border: none;
 }
 
@@ -379,7 +488,7 @@ button:active {
     color: white;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 /* Effet au survol */
@@ -392,4 +501,437 @@ button:active {
     background-color: #ebb548;
     transform: scale(0.98);
     /* Légère réduction pour effet de clic */
+}
+
+/* ==============NAVBAR AVEC LOGO SVG =================== */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: rgba(2, 0, 6, 0.85);
+    backdrop-filter: blur(6px);
+    color: white;
+    padding: 8px 20px;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Style du logo dans la navbar */
+.nav-container .about-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-container .about-photo:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(2, 0, 6, 0.85);
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.nav-menu li a:hover {
+    color: #ebb548;
+}
+
+/* Burger Menu (mobile) */
+.nav-toggle {
+    display: none;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 6px 15px;
+    }
+
+    .nav-container .about-photo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.95);
+        position: absolute;
+        top: 58px;
+        right: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        gap: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li a {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 5px 10px;
+    }
+
+    .nav-container .about-photo {
+        width: 38px;
+        height: 38px;
+    }
+
+    .nav-menu {
+        right: 10px;
+        top: 52px;
+        padding: 12px;
+    }
+
+    .nav-menu li a {
+        font-size: 0.9em;
+    }
+}
+
+/* =================SECTION COMPÉTENCES======================== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.skill-card {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill-card:hover {
+    background: rgba(0, 0, 0, 0.7);
+    transform: scale(1.05);
+    /* transform: translateY(-6px); */
+    box-shadow: 0 12px 40px rgba(235, 181, 72, 0.35);
+}
+
+
+
+/* ================== SECTION CONTACT ================= */
+#contact {
+    padding: 60px 15px;
+    background: rgba(255, 255, 255, 0.08);
+    text-align: center;
+    overflow-x: hidden;
+    /* Empêche le débordement horizontal */
+}
+
+#contact h2 {
+    font-size: 2em;
+    color: #ebb548;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* --- Disposition des deux colonnes --- */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* --- Styles communs aux deux blocs --- */
+.contact-form,
+.contact-info {
+    flex: 1;
+    min-width: 260px;
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 16px;
+    padding: 25px 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: fadeIn 1s ease-in-out;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* --- TITRES internes --- */
+.contact-form h3,
+.contact-info h3 {
+    color: #fff;
+    margin-bottom: 18px;
+    border-left: 4px solid #ebb548;
+    padding-left: 10px;
+    font-size: 1.2em;
+}
+
+/* --- FORMULAIRE --- */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #ebb548;
+    margin-bottom: 6px;
+    font-size: 0.95em;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-sizing: border-box;
+    /* IMPORTANT : empêche le débordement */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 8px #ebb548;
+}
+
+.contact-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #6b5b95, #9aa872);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.4s ease, transform 0.2s;
+    margin-top: 15px;
+}
+
+.contact-btn:hover {
+    background: linear-gradient(135deg, #ebb548, #6b5b95);
+    transform: scale(1.03);
+}
+
+/* --- COORDONNÉES --- */
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.contact-info li {
+    margin: 15px 0;
+    font-size: 1.05em;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    word-break: break-word;
+    /* Empêche les liens longs de déborder */
+}
+
+.contact-info li span {
+    font-size: 1.3em;
+    margin-right: 10px;
+    color: #ebb548;
+    flex-shrink: 0;
+    /* L'emoji ne rétrécit pas */
+}
+
+.contact-info a {
+    color: #ebb548;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-info a:hover {
+    /* color: #9aa872; */
+    transform: scale(1.05);
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 12px 40px rgba(235, 181, 72, 0.35);
+}
+
+.contact-quote {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-style: italic;
+    color: #ddd;
+    text-align: center;
+}
+
+/* --- Feedback --- */
+.feedback {
+    margin-top: 12px;
+    font-size: 0.95em;
+    text-align: center;
+    color: #ffd966;
+}
+
+/* --- Responsive optimisé --- */
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 0 10px;
+    }
+
+    .contact-form,
+    .contact-info {
+        width: 100%;
+        max-width: 550px;
+    }
+}
+
+@media (max-width: 768px) {
+    #contact {
+        padding: 40px 10px;
+    }
+
+    #contact h2 {
+        font-size: 1.6em;
+        margin-bottom: 30px;
+    }
+
+    .contact-form,
+    .contact-info {
+        padding: 20px 18px;
+        max-width: 100%;
+        min-width: auto;
+    }
+
+    .contact-form h3,
+    .contact-info h3 {
+        text-align: center;
+        border-left: none;
+        padding-left: 0;
+        font-size: 1.1em;
+        margin-bottom: 15px;
+    }
+
+    .contact-info li {
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: left;
+        font-size: 0.95em;
+    }
+
+    .contact-info ul {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        overflow-x: hidden;
+        /* Empêche le scroll horizontal */
+    }
+
+    #contact {
+        padding: 30px 8px;
+    }
+
+    #contact h2 {
+        font-size: 1.4em;
+        margin-bottom: 25px;
+    }
+
+    .contact-container {
+        gap: 20px;
+        padding: 0 5px;
+    }
+
+    .contact-form,
+    .contact-info {
+        padding: 18px 15px;
+        min-width: auto;
+        width: calc(100% - 10px);
+        margin: 0 5px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    .form-group label {
+        font-size: 0.9em;
+        margin-bottom: 5px;
+    }
+
+    .contact-btn {
+        font-size: 0.9em;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .contact-info li {
+        font-size: 0.9em;
+        margin: 10px 0;
+    }
+
+    .contact-info li span {
+        font-size: 1em;
+        margin-right: 8px;
+    }
+
+    .contact-quote {
+        padding-top: 15px;
+    }
+
+    .contact-quote p {
+        font-size: 0.85em;
+    }
 }

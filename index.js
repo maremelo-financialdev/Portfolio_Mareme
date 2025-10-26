@@ -139,3 +139,31 @@ document.getElementById("cv-button").addEventListener("click", () => {
     window.open("CV_Développeuse_Mareme.pdf", "_blank"); // Ton CV doit être placé dans le dossier du site
 });
 
+// --- NAVBAR responsive ---
+const navToggle = document.getElementById("nav-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+navToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
+
+// --- Smooth scroll ---
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+        navMenu.classList.remove("active");
+    });
+});
+
+// Feedback visuel du formulaire de contact
+document.getElementById("contact-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const feedback = document.getElementById("form-feedback");
+    feedback.textContent = "✅ Votre message a bien été envoyé ! Merci.";
+    e.target.reset();
+    setTimeout(() => {
+        feedback.textContent = "";
+    }, 4000);
+});

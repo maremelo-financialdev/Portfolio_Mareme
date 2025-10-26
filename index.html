@@ -2,36 +2,69 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio — Mareme LO</title>
+    <meta name="description" content="Portfolio de Mareme LO ">
     <link rel="stylesheet" href="index.css">
     <script src="index.js" defer></script>
 </head>
 
 <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <img src="mareme_logo_modern.svg" alt="Photo de profil de Mareme LO" class="about-photo" />
+            <!-- <a href="#top" class="nav-brand">Mareme LO</a> -->
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menu mobile">☰</button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link" target="_blank" rel="noopener">Mon profil</a>
+                </li>
 
-    <!-- HEADER avec photo et nom -->
-    <header>
-        <div class="profile">
-            <img src="Photo_profil.jpg" alt="Ma photo" class="photo">
-            <h1>Mareme LO</h1>
-            <p>Etudiante en formation informatique à EPITECH PARIS </p>
-            <h5> A la recherche d'un contrat d'apprentissage en data analyst ou en développement d'applications</h5>
-            <h6>Rythme d'alternance : 4 semaines en entreprise / 2 semaines école.
-                <br> Durée du contrat d'alternance : au moins 9 mois (de Janvier 2026 à Septembre 2026) et au
-                maximum
-                2ans et démi.
-            </h6>
-            <button id="cv-button">📄 Consulter le CV</button>
+            </ul>
         </div>
-    </header>
+    </nav>
 
-    <!-- SECTION PROJETS -->
+    <!-- HEADER + MON PARCOURS -->
+    <section id="about" class="about-section">
+        <div class="about-wrapper">
+            <div class="about-photo-box">
+                <img src="Photo_profil.jpg" alt="Photo de profil de Mareme LO" class="about-photo" />
+                <h1 class="about-name">Mareme LO</h1>
+                <p class="about-role">Étudiante en informatique — EPITECH Paris</p>
+                <p class="about-subrole">Future Data Analyst / Développeuse d’applications</p>
+                <button id="cv-button">📄 Consulter le CV</button>
+            </div>
+
+            <div class="about-text-box">
+                <h2>💫 Mon Parcours</h2>
+                <p>
+                    Passionnée par la technologie et les données, j’ai débuté mon parcours en finance avant de me
+                    tourner vers l’informatique et l’analyse de données à
+                    <strong>EPITECH Paris</strong>.
+                </p>
+                <p>
+                    Mon objectif ? Allier rigueur analytique et créativité technique pour concevoir des outils
+                    qui transforment la complexité des chiffres en décisions éclairées.
+                </p>
+                <p>
+                    Aujourd’hui, je cherche un <strong>contrat d’apprentissage</strong> en
+                    <em>data analysis</em> ou <em>développement d’applications</em>
+                    dès <strong>janvier 2026</strong>, où je pourrai apprendre, créer et impacter.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- PROJETS -->
     <section id="projects">
         <h2>🚀 Mes Projets</h2>
         <div class="projects-grid">
-
             <!-- Mes projets -->
             <div class="project-card">
                 <h3>Projet 1 : Calculs financiers - projet photovolcaique</h3>
@@ -132,11 +165,8 @@
                 </a>
 
             </div>
-
-
         </div>
     </section>
-
 
     <!-- SECTION COMPETENCES VISES d'ici fin Décembnre -->
     <section id="Compétence_12_2025">
@@ -219,34 +249,90 @@
         </div>
     </section>
 
-    <!-- ME CONTACTER -->
-    <footer>
+    <!-- COMPÉTENCES -->
+    <section id="skills">
+        <h2>💡 Mes Compétences</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Développement Web</h3>
+                <p>HTML5, CSS3, JavaScript, Python Flask, Bootstrap, Materialize.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Analyse de Données</h3>
+                <p>Excel/VBA, SQL, Power BI, Python, modélisation financière.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Programmation</h3>
+                <p>Python, Java, POO, algorithmes, structures de données, automatisation de tâches.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Compétences en Finance</h3>
+                <p>Comptabilité (avec 6 ans d'expériences), analyse financière, marchés financiers, finance
+                    d'entreprise, contrôle de gestion.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Soft Skills</h3>
+                <p>Rigueur, autonomie, communication, travail en équipe, gestion de projet agile.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
         <h2>📬 Me Contacter</h2>
-        <!-- email -->
-        <p>Email :
-            <a href="mailto:maremelo616@gmail.com">maremelo616@gmail.com</a>
-        </p>
 
-        <!-- numéro téléphone -->
-        <p>Numéro téléphone :
-            <a> +33 6 22 11 97 15</a>
-        </p>
+        <div class="contact-grid">
+            <div class="contact-container">
+                <!-- Formulaire -->
+                <form id="contact-form" method="POST" action="/contact" class="contact-form ">
+                    <h3>Envoyez-moi un message</h3>
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input id="name" name="name" type="text" placeholder="Votre nom complet" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="exemple@mail.com" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Votre message ici..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn contact-btn">✉️ Envoyer le message</button>
+                    <p id="form-feedback" class="feedback"></p>
+                </form>
+
+                <!-- Coordonnées -->
+                <div class="contact-info">
+                    <h3>📇 Mes coordonnées</h3>
+                    <ul>
+                        <li><span>📧</span> <a href="mailto:maremelo616@gmail.com">maremelo616@gmail.com</a></li>
+                        <li><span>📞</span> <a href="tel:+33622119715">+33 6 22 11 97 15</a></li>
+                        <li><span>💼</span> <a href="https://www.linkedin.com/in/mareme-lo-9013aa157"
+                                target="_blank">LinkedIn — Mareme LO</a></li>
+                        <li><span>💻</span> <a href="https://github.com/maremelo-financialdev" target="_blank">GitHub —
+                                @maremelo-financialdev</a></li>
+                    </ul>
+
+                    <div class="contact-quote">
+                        <p>“Disponible pour échanger sur vos projets Data et Développement.”</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
 
-        <!-- LinkedIn -->
-        <p>LinkedIn : <a href="https://www.linkedin.com/in/mareme-lo-9013aa157?utm_source" target="_blank"
-                rel="noopener noreferrer">
-                Mon profil LinkedIn</a>
-        </p>
-
-        <!-- Github -->
-        <p> GitHub :
-            <a href="https://github.com/maremelo-financialdev" target="_blank" rel="noopener noreferrer">
-                Mon profil GitHub</a>
-
+    <footer>
+        <p>© 2025 — Portfolio Mareme LO | Tous droits réservés.</p>
     </footer>
 
-    <!-- Structure du popup -->
+    <!-- POPUP -->
     <div id="popup" class="popup-overlay">
         <div class="popup-content">
             <span class="close-btn" onclick="closePopup()">&times;</span>
@@ -255,30 +341,14 @@
                 <p>Voici quelques images illustrant le projet.</p>
             </div>
             <div class="carousel">
-                <div class="carousel-images">
-                    <img src="..." class="carousel-img active">
-                    <img src="..." class="carousel-img">
-                    <!-- autres images -->
-                </div>
+                <div class="carousel-images"></div>
                 <div class="carousel-caption">
-                    <p id="carousel-text">Cette partie concerne la facturation</p>
+                    <p id="carousel-text"></p>
                 </div>
-
-                <div class="carousel-pagination">
-                    <button class="page-arrow" onclick="prevImage()">←</button>
-                    <span class="page-number active" onclick="goToImage(0)">1</span>
-                    <span class="page-number" onclick="goToImage(1)">2</span>
-                    <span class="page-number" onclick="goToImage(2)">3</span>
-                    <span class="page-number" onclick="goToImage(3)">4</span>
-                    <span class="page-number" onclick="goToImage(4)">5</span>
-                    <span class="ellipsis">...</span>
-                    <span class="page-number" onclick="goToImage(49)">50</span>
-                    <button class="page-arrow" onclick="nextImage()">→</button>
-                </div>
-
-
+                <div class="carousel-pagination"></div>
             </div>
-
         </div>
-
+    </div>
 </body>
+
+</html>
